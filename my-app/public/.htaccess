@@ -1,0 +1,9 @@
+AuthType Basic
+AuthName "Viking Driving School"
+AuthUserFile ./public/.htpasswd
+Require valid-user
+
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
